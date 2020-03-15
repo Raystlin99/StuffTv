@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import App from './App';
-import Counter from './Counter';
-import Clicker from './Clicker';
+import Counter from './components/Counter';
+import Clicker from './components/Clicker';
 
 describe('App', () => {
   test('should render coutner and clicker', () => {
