@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import showApi from '../api/showApi';
+import { Header, Button } from 'semantic-ui-react'
 
-const Shows = () => {
+const ShowList = () => {
   const [data, setShows] = useState([]);
 
   useEffect(() => {
@@ -13,10 +14,11 @@ const Shows = () => {
     loadShows();
   }, []);
 
-  return <div>
-    {data ? data.map((item, index) => <div key={index}>{item.id} {item.name}</div>) : null}
-  </div>
+  return <React.Fragment>
+    {data ? data.map((item, index) => <Header key={index} textAlign='center'>{item.id} {item.name}</Header>) : null}
+    <Button>Click Here</Button>
+  </React.Fragment>
 };
 
 
-export default Shows;
+export default ShowList;

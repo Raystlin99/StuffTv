@@ -1,7 +1,13 @@
 import React from 'react';
-import Shows from './show/Shows';
-import './App.css';
+import Search from './search/Search';
+import { Container } from 'semantic-ui-react'
 
-const App = () => <div className="App"><Shows /></div>;
+const App = () => {
+  const searchHandler = (searchString) => {
+    console.log('Do Search!', searchString);
+  };
+
+  return <Container><Search searchHandler={searchHandler} /></Container>;
+}
 
 export default App;

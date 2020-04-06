@@ -1,12 +1,13 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import App from './App';
-import Shows from './show/Shows';
+import Search from './search/Search';
+import { Container } from 'semantic-ui-react';
 
 describe('App', () => {
-  test('should render coutner and clicker', () => {
+  test('should render Container and Search', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('div')).toExist();
-    expect(wrapper.find(Shows)).toExist();
+    expect(wrapper.find(Container)).toExist();
+    expect(wrapper.find(Search)).toExist();
   });
 });
