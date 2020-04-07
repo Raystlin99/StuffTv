@@ -1,0 +1,4 @@
+* Rework API with latest Axios version and instructions (use hooks!)
+* Show results from search
+* Test coverage on all components before creating more!
+* Highlights gaps in test coverage (because of hooks and semantic-ui action components)

@@ -15,8 +15,8 @@ const search = async (showName) => {
 };
 
 const formatShow = (data) => {
-  const test = data.map(item => ({ id: item.show.id, name: item.show.name }))
-  return test;
+  const testData = data.map(item => ({ id: item.show.id, name: item.show.name }))
+  return testData;
 }
 
 export default { search };
