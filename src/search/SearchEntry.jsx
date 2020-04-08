@@ -1,7 +1,7 @@
 import React, { useEffect, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Header, Input, Form } from 'semantic-ui-react'
-import SearchIcon from './SearchIcon';
+import SearchIcon from '../components/SearchIcon';
 
 const SearchEntry = ({ searchString, onSearchChange, onSearch }) => {
   const inputRef = createRef()

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import PropType from 'prop-types';
 import SearchEntry from './SearchEntry';
-import ShowList from '../show/ShowList';
+import ShowList from '../showList/ShowList';
 import showApi from '../api/showApi';
+import { withRouter } from "react-router-dom";
 
-const Search = ({ initialSearchString }) => {
+const Search = ({ initialSearchString, history }) => {
   const [searchString, setSearchString] = useState(initialSearchString ? initialSearchString : '');
   const [data, setShows] = useState(null);
 
@@ -17,6 +18,7 @@ const Search = ({ initialSearchString }) => {
 
     const result = await showApi.search(searchString);
     setShows(result);
+    history.push('/results');
   };
 
   return data
@@ -28,4 +30,4 @@ Search.prototype = {
   initialSearchString: PropType.string
 };
 
-export default Search;
+export default withRouter(Search);
