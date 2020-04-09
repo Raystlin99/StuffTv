@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropType from 'prop-types';
 import SearchEntry from './SearchEntry';
 import ShowList from '../showList/ShowList';
 import showApi from '../api/showApi';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom"; // TODO: Don't like having to import this!, history prop should already work.
+import ShowContext from '../common/ShowContext';
 
 const Search = ({ initialSearchString, history }) => {
+  // App Show Context
+  const showContext = useContext(ShowContext);
+  console.log('showContext: ', showContext);
+
+  // State
   const [searchString, setSearchString] = useState(initialSearchString ? initialSearchString : '');
   const [data, setShows] = useState(null);
 
